@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day | Inspire</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i> Inspire.
+        </div>
+        <button id="viewFavoritesBtn" class="nav-btn">
+            <i class="fa-solid fa-heart"></i> Favorites
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="quote-card glass-panel" id="quoteCard">
+            <div class="quote-icon">
+                <i class="fa-solid fa-quote-left"></i>
+            </div>
+            
+            <div class="quote-content">
+                <p id="quoteText" class="quote-text">Loading inspiration...</p>
+                <p id="quoteAuthor" class="quote-author">-</p>
+            </div>
+
+            <div class="actions">
+                <button id="favoriteBtn" class="action-btn" title="Add to Favorites">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <button id="newQuoteBtn" class="primary-btn">
+                    New Quote
+                </button>
+                <div class="share-container">
+                    <button id="shareBtn" class="action-btn" title="Share Quote">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                    <div id="shareMenu" class="share-menu glass-panel hidden">
+                        <a href="#" id="shareTwitter" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                        <a href="#" id="shareWhatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <button id="copyQuote"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Favorites Modal -->
+    <div id="favoritesModal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h2>Your Favorites</h2>
+                <button id="closeModalBtn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="favoritesList" class="favorites-list">
+                <!-- Favorite items will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">
+        <p id="toastMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
